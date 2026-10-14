@@ -1,1 +1,1 @@
-SELECT * FROM WALMART.BRONZE.ORDERS
+SELECT * FROM{{source('walmart_databricks', 'order_items')}};

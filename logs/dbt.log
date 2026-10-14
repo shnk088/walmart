@@ -128,3 +128,32 @@ Parsing Error
 [0m02:38:08.831268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2A8650910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2ABD0FF70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A2BC831D30>]}
 [0m02:38:08.834715 [debug] [MainThread]: Flushing usage events
 [0m02:38:10.616258 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:12:23.308653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D3E400820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D406A8370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D406A8160>]}
+
+
+============================== 01:12:23.318220 | 7815c20f-7b97-4ec2-b810-0a5f941ed4c2 ==============================
+[0m01:12:23.318220 [info ] [MainThread]: Running with dbt=1.10.19
+[0m01:12:23.318220 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'debug': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'no_print': 'None', 'invocation_command': 'dbt init', 'version_check': 'True', 'empty': 'None', 'printer_width': '80', 'partial_parse': 'True', 'log_path': 'logs', 'introspect': 'True', 'warn_error': 'None', 'write_json': 'True', 'quiet': 'False', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'profiles_dir': 'C:\\Users\\shnk0\\.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m01:12:29.595292 [error] [MainThread]: Encountered an error:
+
+[0m01:12:29.759497 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\shnk0\Desktop\data_dbt\.venv\lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\shnk0\Desktop\data_dbt\.venv\lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\shnk0\Desktop\data_dbt\.venv\lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\shnk0\Desktop\data_dbt\.venv\lib\site-packages\dbt\task\init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+  File "C:\Users\shnk0\Desktop\data_dbt\.venv\lib\site-packages\dbt\task\init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "C:\Users\shnk0\Desktop\data_dbt\.venv\lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\shnk0\Desktop\data_dbt\.venv\lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m01:12:29.762983 [debug] [MainThread]: Command `dbt init` failed at 01:12:29.762983 after 6.72 seconds
+[0m01:12:29.762983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D3E400820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D407357F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016D40735790>]}
+[0m01:12:29.762983 [debug] [MainThread]: Flushing usage events
+[0m01:12:31.296100 [debug] [MainThread]: An error was encountered while trying to flush usage events
